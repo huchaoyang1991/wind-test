@@ -1,17 +1,14 @@
 package com.sun.module.http;
-
 import org.apache.http.client.methods.HttpRequestBase;
 
+import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Administrator on 2017/7/16.
- */
 public class HttpRequest {
 	private String url;
 	private HttpRequestBase httpRequestBase;
-	private Map<String,String> headers;
-	private String requestBody;
+	private Map<String, String> headers = new HashMap<String, String>();
+	private Map<String, String> requestBody = new HashMap<String, String>();
 
 	public String getUrl() {
 		return url;
@@ -37,13 +34,27 @@ public class HttpRequest {
 		this.headers = headers;
 	}
 
-	public String getRequestBody() {
+	public Map<String, String> getRequestBody() {
 		return requestBody;
 	}
 
-	public void setRequestBody(String requestBody) {
+	public void setRequestBody(Map<String, String> requestBody) {
 		this.requestBody = requestBody;
 	}
 
+	public void setHeaderValue(String headerName, String headerValue) {
+		this.headers.put(headerName, headerValue);
+	}
 
+	public String getHeaderValue(String headerName) {
+		return this.headers.get(headerName);
+	}
+
+	public void addParamValue(String paramName, String paramValue) {
+		this.requestBody.put(paramName, paramValue);
+	}
+
+	public String getParamValue(String paramName) {
+		return this.requestBody.get(paramName);
+	}
 }

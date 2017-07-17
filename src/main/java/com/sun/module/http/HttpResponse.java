@@ -7,7 +7,8 @@ import java.util.Map;
  */
 public class HttpResponse {
 	private String statusCode;
-	private Map<String,String> Headders;
+	private Map<String,String> Headers;
+	private String responseBody;
 
 	public String getStatusCode() {
 		return statusCode;
@@ -17,12 +18,12 @@ public class HttpResponse {
 		this.statusCode = statusCode;
 	}
 
-	public Map<String, String> getHeadders() {
-		return Headders;
+	public Map<String, String> getHeaders() {
+		return Headers;
 	}
 
-	public void setHeadders(Map<String, String> headders) {
-		Headders = headders;
+	public void setHeaders(Map<String, String> headers) {
+		Headers = headers;
 	}
 
 	public String getResponseBody() {
@@ -33,6 +34,6 @@ public class HttpResponse {
 		this.responseBody = responseBody;
 	}
 
-	private String responseBody;
+
 
 }
