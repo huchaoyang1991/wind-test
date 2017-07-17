@@ -1,5 +1,4 @@
 package com.sun.utils;
-import org.apache.http.impl.client.CloseableHttpClient;
 
 import com.sun.module.http.HttpRequest;
 import com.sun.module.http.HttpResponse;
@@ -16,15 +15,15 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 public class HttpClientUtil {
 	private static Logger logger = Logger.getLogger(HttpClientUtil.class);
 	private CloseableHttpClient httpClient;
 
 	public static HttpResponse doGet(HttpRequest httpRequest) {
 		HttpClientUtil httpClientUtil = new HttpClientUtil();
-		if (httpRequest.getRequestBody() != null)
+		if (httpRequest.getRequestBody()!=null&&httpRequest.getRequestBody().size()!=0) {
 			httpRequest.setUrl(formatUrl(httpRequest.getUrl(), httpRequest.getRequestBody()));
+		}
 		logger.info(httpRequest.getUrl());
 		HttpGet httpGet = new HttpGet(httpRequest.getUrl());
 		return httpClientUtil.sendRequest(httpGet, httpRequest);

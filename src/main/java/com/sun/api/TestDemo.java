@@ -1,29 +1,23 @@
 package com.sun.api;
 
-import com.sun.base.BaseTestCase;
 import com.sun.module.http.HttpRequest;
 import com.sun.module.http.HttpResponse;
 import com.sun.utils.HttpClientUtil;
 import org.testng.annotations.Test;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by Administrator on 2017/7/16.
  */
-public class TestDemo extends BaseTestCase{
-
+public class TestDemo{
 	private HttpRequest httpRequest;
 	@Test
 	public void run(){
 		httpRequest=new HttpRequest();
-		httpRequest.setUrl("http://localhost:9090/test");
-		Map headers=new HashMap<>();
-		headers.put("a","a");
-		headers.put("1","1");
-		httpRequest.setHeaders(headers);
+		httpRequest.setUrl("http://www.baidu.com");
+		httpRequest.setHeaderValue("Content-Type","text/html;charset=UTF-8");
+		//httpRequest.addParamValue("latlon","121.51256561279296875000,31.23718833923339843750");
 		HttpResponse response=HttpClientUtil.doGet(httpRequest);
-		super.logger.info(response.getStatusCode());
+
+
 	}
 }
