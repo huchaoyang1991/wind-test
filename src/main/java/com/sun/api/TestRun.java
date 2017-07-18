@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import javax.annotation.Resource;
 
 /**
- * Created by Administrator on 2017/7/15.
+ * Created by huchaoyang on 2017/7/15.
  */
 public class TestRun extends BaseTestCase {
 	@Resource

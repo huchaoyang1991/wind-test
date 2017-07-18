@@ -3,7 +3,7 @@ package com.sun.module.http;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2017/7/16.
+ * Created by huchaoyang on 2017/7/16.
  */
 public class HttpResponse {
 	private String statusCode;

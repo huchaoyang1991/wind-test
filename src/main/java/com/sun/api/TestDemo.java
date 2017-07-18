@@ -6,7 +6,7 @@ import com.sun.utils.HttpClientUtil;
 import org.testng.annotations.Test;
 
 /**
- * Created by Administrator on 2017/7/16.
+ * Created by huchaoyang on 2017/7/16.
  */
 public class TestDemo{
 	private HttpRequest httpRequest;

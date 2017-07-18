@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Created by Administrator on 2017/7/15.
+ * Created by huchaoyang on 2017/7/15.
  */
 public class ExcelData implements Iterator<Object[]> {
 	private static Logger logger=Logger.getLogger(ExcelData.class);//声明log4j日志

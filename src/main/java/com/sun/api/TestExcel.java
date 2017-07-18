@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * Created by Administrator on 2017/7/15.
+ * Created by huchaoyang on 2017/7/15.
  */
 public class TestExcel extends BaseTestCase{
 	@Test(testName = "测试数据驱动",dataProvider = "data")

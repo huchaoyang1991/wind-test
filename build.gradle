@@ -45,6 +45,9 @@ dependencies {
     //httpclient相关依赖
     compile ("org.apache.httpcomponents:httpclient:4.5.2")
 
+    //selenium相关依赖
+    compile ("org.seleniumhq.selenium:selenium-java:2.53.1")
+
     // json相关依赖
     compile("com.alibaba:fastjson:1.2.7")
     //dom4j相关依赖
