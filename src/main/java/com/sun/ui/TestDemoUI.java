@@ -1,6 +1,6 @@
 package com.sun.ui;
 
-import com.sun.utils.WebDriverUtil;
+import wind.test.webUI.WebDriverUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;

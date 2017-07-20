@@ -1,8 +1,8 @@
 package com.sun.api;
 
-import com.sun.module.http.HttpRequest;
-import com.sun.module.http.HttpResponse;
-import com.sun.utils.HttpClientUtil;
+import wind.test.http.HttpRequest;
+import wind.test.http.HttpResponse;
+import wind.test.http.HttpClientUtil;
 import org.testng.annotations.Test;
 
 /**

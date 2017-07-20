@@ -9,5 +9,5 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
  */
 @ContextConfiguration("classpath:applicationContext.xml")
 public class BaseTestCase extends AbstractTestNGSpringContextTests{
-	public Logger logger=Logger.getLogger(this.getClass());
+	public static Logger logger=Logger.getLogger(BaseTestCase.class);
 }

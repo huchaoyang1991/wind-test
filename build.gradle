@@ -1,5 +1,5 @@
-group 'com.sun'
-version '1.0-SNAPSHOT'
+group 'wind.test'
+version '1.0'
 
 apply plugin: 'java'
 sourceCompatibility = 1.8
@@ -43,17 +43,19 @@ dependencies {
             "org.mybatis:mybatis-spring:1.2.0")
 
     //httpclient相关依赖
-    compile ("org.apache.httpcomponents:httpclient:4.5.2")
+    compile("org.apache.httpcomponents:httpclient:4.5.2")
 
     //selenium相关依赖
-    compile ("org.seleniumhq.selenium:selenium-java:2.53.1")
+    compile("org.seleniumhq.selenium:selenium-java:2.53.1")
 
     // json相关依赖
     compile("com.alibaba:fastjson:1.2.7")
     //dom4j相关依赖
     compile("org.dom4j:com.springsource.org.dom4j:1.6.1")
     // jxl获取excel相关依赖
-    compile ("net.sourceforge.jexcelapi:jxl:2.6.12")
+    compile("net.sourceforge.jexcelapi:jxl:2.6.12")
+    // ssh连接相关依赖
+    compile group: 'com.jcraft', name: 'jsch', version: '0.1.53'
 
     //测试编译时的依赖
     compile("org.testng:testng:6.9.10")
@@ -62,4 +64,9 @@ dependencies {
 //使用TestNG生成测试报告
 test {
     useTestNG()
+}
+
+//修改gradle 构建编码为UTF-8
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
 }
