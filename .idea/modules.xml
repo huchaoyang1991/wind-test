@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sunGradle.iml" filepath="$PROJECT_DIR$/.idea/modules/sunGradle.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sunGradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sunGradle_main.iml" group="sunGradle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sunGradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sunGradle_test.iml" group="sunGradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test_main.iml" group="sunGradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test_test.iml" group="sunGradle" />
     </modules>
   </component>
 </project>
