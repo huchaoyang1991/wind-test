@@ -1,4 +1,4 @@
-package com.sun.base;
+package wind.test.base;
 
 import org.apache.log4j.Logger;
 import org.springframework.test.context.ContextConfiguration;

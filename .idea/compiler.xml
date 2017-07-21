@@ -20,6 +20,8 @@
     <bytecodeTargetLevel target="1.8">
       <module name="sunGradle_main" target="1.8" />
       <module name="sunGradle_test" target="1.8" />
+      <module name="wind-test_main" target="1.8" />
+      <module name="wind-test_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,6 @@
 package com.sun.api;
 
-import com.sun.base.BaseTestCase;
+import wind.test.base.BaseTestCase;
 import com.sun.service.UserService;
 import org.testng.annotations.Test;
 

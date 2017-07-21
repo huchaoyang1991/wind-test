@@ -1,6 +1,6 @@
 package com.sun.api;
 
-import com.sun.base.BaseTestCase;
+import wind.test.base.BaseTestCase;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import wind.test.testNG.ExcelData;
