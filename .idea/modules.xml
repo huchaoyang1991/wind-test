@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test_main.iml" group="sunGradle" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test_test.iml" group="sunGradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test_main.iml" group="wind-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wind-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/wind-test_test.iml" group="wind-test" />
     </modules>
   </component>
 </project>

@@ -20,7 +20,8 @@
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
         <property name="locations">
             <list>
-                <value>classpath:properties/*.properties</value>
+                <value>classpath*:config/db/${DB}/jdbc.properties</value>
+                <value>classpath*:dataDriver/**/*.xls</value>
                 <!--要是有多个配置文件，只需在这里继续添加即可 -->
             </list>
         </property>
@@ -50,7 +51,7 @@
     <!-- 配置Mybatis的文件 ，mapperLocations配置**Mapper.xml文件位置，configLocation配置mybatis-config文件位置-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="mapperLocations" value="orm.mybatis/*.xml"/>
+        <property name="mapperLocations" value="classpath*:ormapping/mybatis/**/*.xml"/>
         <!--<property name="configLocation" value="classpath:mybatis-config.xml" />-->
         <!-- <property name="typeAliasesPackage" value="com.tiantian.ckeditor.model"
             /> -->

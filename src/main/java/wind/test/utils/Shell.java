@@ -2,7 +2,6 @@ package wind.test.utils;
 
 import com.jcraft.jsch.*;
 import org.apache.log4j.Logger;
-import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -126,18 +125,5 @@ public class Shell {
 			e.printStackTrace();
 		}
 		return returnCode;
-	}
-
-
-	@Test
-	public void run() {
-
-		Shell shell = new Shell();
-		shell.setIp("10.59.81.11");
-		shell.setUsername("www");
-		shell.setPassword("www");
-		shell.setPort(22);
-		logger.info(shell.execute("ls -l"));
-
 	}
 }

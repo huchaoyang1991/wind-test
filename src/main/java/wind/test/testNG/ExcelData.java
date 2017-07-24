@@ -25,6 +25,7 @@ public class ExcelData implements Iterator<Object[]> {
 			//获取数据驱动所在路径
 			String fileName=object.getClass().getSimpleName();
 			String filePath=new File("").getCanonicalPath()+"\\src\\main\\resources\\dataDriver\\"+fileName+".xls";
+			logger.info("READ DATADRIVER FROM "+filePath);
 			//获取对应路径下的xls文件
 			this.book=Workbook.getWorkbook(new File(filePath));
 			//获取第一个sheet表信息
