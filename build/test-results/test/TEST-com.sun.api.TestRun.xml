@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.sun.api.TestRun" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-07-24T14:47:55" hostname="Sun" time="0.012">
+<testsuite name="com.sun.api.TestRun" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-05-11T08:15:18" hostname="Sun" time="0.011">
   <properties/>
-  <testcase name="run" classname="com.sun.api.TestRun" time="0.012"/>
+  <testcase name="run" classname="com.sun.api.TestRun" time="0.011"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
