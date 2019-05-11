@@ -10,7 +10,6 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -29,7 +28,7 @@ public class BaseTestCase extends AbstractTestNGSpringContextTests {
     public void initDb() {
         //DB为数据环境路径（目前:qa,home,如特殊测试需要可覆盖次父类的内容）
         System.setProperty("DB", "qa");
-       logger.info("READ DATABASE FROM "+System.getProperty("DB"));
+        logger.info("READ DATABASE FROM " + System.getProperty("DB"));
     }
 
     private void initWebDriver() {
@@ -59,33 +58,35 @@ public class BaseTestCase extends AbstractTestNGSpringContextTests {
      * @return
      */
     public WebDriver getWebDriver(int driverInt) {
-        String driverPath = "";
         try {
-            driverPath = new File("").getCanonicalPath() + "\\src\\main\\resources\\dataDriver\\browser\\";
-            logger.info("READ DRIVERPATH FROM "+driverPath);
-        } catch (IOException e) {
+            String driverPath = new File("").getCanonicalPath() + "\\src\\main\\resources\\dataDriver\\browser\\";
+            logger.info("READ DRIVERPATH FROM " + driverPath);
+
+            switch (driverInt) {
+                case CHROME_DRIVER: {
+                    System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
+                    webDriver = new ChromeDriver();
+                    this.initWebDriver();
+                    break;
+                }
+                case FIREFOX_DRIVER: {
+                    webDriver = new FirefoxDriver();
+                    this.initWebDriver();
+                    break;
+                }
+                case IE_DRIVER: {
+                    System.setProperty("webdriver.ie.driver", driverPath + "IEDriverServer32.exe");
+                    webDriver = new InternetExplorerDriver();
+                    this.initWebDriver();
+                    break;
+                }
+                default:
+                    break;
+            }
+        } catch (Exception e) {
+            //抓到所有的异常均释放webDriver
             e.printStackTrace();
-        }
-        switch (driverInt) {
-            case CHROME_DRIVER: {
-                System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver.exe");
-                webDriver = new ChromeDriver();
-                this.initWebDriver();
-                break;
-            }
-            case FIREFOX_DRIVER: {
-                webDriver = new FirefoxDriver();
-                this.initWebDriver();
-                break;
-            }
-            case IE_DRIVER: {
-                System.setProperty("webdriver.ie.driver", driverPath + "IEDriverServer32.exe");
-                webDriver = new InternetExplorerDriver();
-                this.initWebDriver();
-                break;
-            }
-            default:
-                break;
+            closeWebDriver();
         }
 
         return webDriver;
